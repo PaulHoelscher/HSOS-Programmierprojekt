@@ -20,7 +20,7 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Deploy to TEST
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@master
         with:
           server: ${{ secrets.FTP_HOST_TEST }}
           username: ${{ secrets.FTP_USER_TEST }}
@@ -43,7 +43,7 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Deploy to PROD
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@master
         with:
           server: ${{ secrets.FTP_HOST_PROD }}
           username: ${{ secrets.FTP_USER_PROD }}
