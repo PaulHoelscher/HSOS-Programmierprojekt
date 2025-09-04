@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.FTP_USER_TEST }}
           password: ${{ secrets.FTP_PASS_TEST }}
           local-dir: ./dist
-          server-dir: /httpdocs
+          server-dir: /httpdocs/
 
   build-prod:
     if: github.base_ref == 'PROD'
@@ -49,4 +49,4 @@ jobs:
           username: ${{ secrets.FTP_USER_PROD }}
           password: ${{ secrets.FTP_PASS_PROD }}
           local-dir: ./dist
-          server-dir: /httpdocs
+          server-dir: /httpdocs/
